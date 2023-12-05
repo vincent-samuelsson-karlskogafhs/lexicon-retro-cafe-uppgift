@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-image: url(caffe-retro-assets/hot.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --font-family: 'Poiret One', 'Spirax', sans-serif;
+    --font-siza-xlarge: 4rem; 
+    --padding-left-side: 0 0 0 400px;
+}
+
+
+.header {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__link {
+    color: antiquewhite;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+    font-family: var(--font-family);
+}
+
+.menu__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-family: var(--font-family);
+    font-size: var(--font-siza-xlarge);
+}   
+
+.hotfresh {
+    display: flex;
+    padding: 0 0 0 400px;
+    background-color: red;
+    color: antiquewhite;
+    font-family: var(--font-family);
+}
+
+.wegive {
+    display: flex;
+    background-color: blue;
+    color: antiquewhite;
+    padding: 0 0 0 560px;
+    font-family: var(--font-family);
+}
+
+.itemhot{
+    display: flex;
+    justify-content: center;
+    background-color: yellowgreen;
+    color: antiquewhite;
+    margin: 0 500px 0 500px;
+}
+
+.menu__hotlist {
+    display: flex;
+    margin: 0 0 0 0;
+}
+
+.menu__hotitem {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+
+}
+
+.item {
+    display: flex;
+    color: green;
+    margin: 100px;
+}
+
+.pris {
+    display: flex;
+    padding: 100px;
+    color: blue;
+}
+
+
