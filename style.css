@@ -5,11 +5,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
-    background-image: url(caffe-retro-assets/hot.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 img {
@@ -17,98 +16,102 @@ img {
 }
 
 :root {
-    --font-family: 'Poiret One', 'Spirax', sans-serif;
-    --font-siza-xlarge: 4rem; 
-    --padding-left-side: 0 0 0 400px;
+    --font-family: 'Spirax', sans-serif;
+    --font-size-article-h1: 50px; 
+    --navbar-color:rgba(43, 28, 35, 0.863);
+    --color-standard: antiquewhite;
+    --border-bottom-standard: 10px solid rgba(43, 28, 35, 0.863);
+    --box-background-standard: rgba(0, 0, 0, 0.8);
+    --article-background-standard: rgb(138, 0, 0, 0.8);
+    --h1-color-standard: darkred;
+    --padding-left-side: 60px;
+    --padding-right-side: 60px;
 }
 
-
-.header {
+.navbar {
+    background-color: var(--navbar-color);
     display: flex;
-}
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-}
-
-.menu__list {
-    display: flex;
-}
-
-.menu__link {
-    color: antiquewhite;
-    font-size: xx-large;
-    display: flex;
-    flex-direction: row;
+    gap: 40px;
     justify-content: center;
+    /* padding block - top och under */
+    padding-block: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.link {
+    color: var(--color-standard);
+    font-size: 30px;
     text-decoration: none;
     font-family: var(--font-family);
+    text-decoration: none;
 }
 
-.menu__item {
-    display: flex;
-    justify-content: space-between;
+section {
     align-items: center;
-    padding: 10px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content:center;
+    height: 100vh;
 }
 
-h2 {
-    display: flex;
-    justify-content: center;
-    color: red;
+/* this a more advanced selector, it brabs every h1 tag that is a child element to and article ta */
+article h1 {
+    color: var(--h1-color-standard);
     font-family: var(--font-family);
-    font-size: var(--font-siza-xlarge);
-}   
+    font-size: var(--font-size-article-h1);
+    text-align: center;
+}
 
-.hotfresh {
-    display: flex;
-    padding: 0 0 0 400px;
-    background-color: red;
-    color: antiquewhite;
+article {
     font-family: var(--font-family);
+    color: var(--color-standard);
 }
 
-.wegive {
-    display: flex;
-    background-color: blue;
-    color: antiquewhite;
-    padding: 0 0 0 560px;
-    font-family: var(--font-family);
+article p {
+    background-color: var(--article-background-standard);
+    color: var(--color-standard);
+    margin-block: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
 }
 
-.itemhot{
-    display: flex;
-    justify-content: center;
-    background-color: yellowgreen;
-    color: antiquewhite;
-    margin: 0 500px 0 500px;
+.hot {
+    background-image: url(caffe-retro-assets/hot.jpg);
 }
 
-.menu__hotlist {
-    display: flex;
-    margin: 0 0 0 0;
+.juicy {
+    background-image: url(caffe-retro-assets/juicy.jpg);
 }
 
-.menu__hotitem {
+.cosy {
+    background-image: url(caffe-retro-assets/cosy.jpg);
+}
+
+.row {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    list-style: none;
-
 }
 
-.item {
-    display: flex;
-    color: green;
-    margin: 100px;
+.box {
+    background-color: var(--box-background-standard);
+    padding: 10px 40px;
 }
 
-.pris {
-    display: flex;
-    padding: 100px;
-    color: blue;
+.p-1{
+    right: var(--padding-right-side);
+}
+
+.p-2{
+    left: var(--padding-left-side);
+}
+
+.hot, .juicy {
+    border-bottom: var(--border-bottom-standard)
 }
 
 
